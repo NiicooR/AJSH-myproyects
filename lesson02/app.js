@@ -1,7 +1,7 @@
 (function () {
 'use strict';
 
-angular.module('adivinarNumeroApp', [])
+angular.module('GuessTheNumberApp', [])
 .controller('GuessTheNumberController', GuessTheNumberController);
 
 	function GuessTheNumberController($scope) {
