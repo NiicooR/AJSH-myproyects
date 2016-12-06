@@ -11,10 +11,14 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
 
+<!-- ACA IMPORTA EL ANGULAR_ROUTE.JS -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+
+
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/7MinWorkout/workout.js"></script>
 
-<title>7 minute workout</title>
+<title>7 minute workout!!</title>
 
 </head>
 <body ng-controller = "WorkoutController">
@@ -22,17 +26,42 @@
 
 		<div class="container app-container">
 			<div class = "navbar-header">
-				<h1>7 minutos de ejercicios!</h1>
+				<h1>7 minutos de ejercicios</h1>
 			</div>
 		</div>		
 	</div>
-
-	<div class = "container body-content app.container">
-		<!--<pre>Ejercicio Actual: {{currentExercise | json}}</pre> -->
+<!--
+<div class = "container body-content app-container">
+		
+		<pre>Ejercicio Actual: {{currentExercise | json}}</pre> 
 		<pre>Ejercicio Actual: {{ejercicioActual | json}}</pre>
 		<pre>Tiempo restante:{{ejercicioActual.duracion - duracionEjercicioActual}}</pre>
 
-	</div>
+	-->
+
+
+	<!--	<div class="row">
+		<div id="exercise-pane" class="col-sm-8 col-cm-offset-2">
+		<div class ="workout-display-div" > </div>
+		<h1>{{ejercicioActual.detalle.titulo}}</h1>
+		<img class="img-responsive" ng-src="{{ejercicioActual.detalle.titulo}}">
+		</img>
+
+		<div class="progress time-progress">
+			<div class="progress-bar" role="progress-bar"
+			aria-valuenow="0" aria-valuemin="0"
+			aria-valuemax="{{ejercicioActual.duracion"
+			ng-style="{'width':{duracionEjercicioActual/ejercicioActual.duracion) *100 + '%'}" >
+				
+			</div>
+
+		</div>
+	
+</div>-->
+
+<div class="container body-content app-container">
+	<div ng-view></div>	
+</div>
 
 </body>
 </html>
